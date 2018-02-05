@@ -1,15 +1,29 @@
 const utils = require('./utils');
 
-it('should add two numbers', () => {
-  const res = utils.add(13, 12);
-  if (res !== 25) {
-    throw new Error(`Expected 44, but got ${res}.`);
-  }
+test('should add two numbers', () => {
+  expect(utils.add(12, 13)).toBe(25);
 });
 
-it('should square a number', () => {
-  const res = utils.square(4);
-  if (res !== 16) {
-    throw new Error(`Expected 16, but got ${res}.`)
-  }
+test('result should be a number', () => {
+  expect(typeof utils.add(12, 13)).toBe('number');
+});
+
+test('should square a number', () => {
+  expect(utils.square(4)).toBe(16);
+});
+
+test('result should be a number', () => {
+  expect(typeof utils.square(4)).toBe('number');
+});
+
+test('should be an object', () => {
+  expect(typeof utils.setname({}, 'Tyler Buchheim')).toBe('object');
+});
+
+test('should set first name', () => {
+  expect(utils.setname({}, 'Tyler Buchheim').firstName).toBe('Tyler');
+});
+
+test('should set last name', () => {
+  expect(utils.setname({}, 'Tyler Buchheim').lastName).toBe('Buchheim');
 });
