@@ -1,0 +1,19 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buchheimt/node-testing.git"
+  },
+  "author": "Tyler Buchheim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buchheimt/node-testing/issues"
+  },
+  "homepage": "https://github.com/buchheimt/node-testing#readme"
+}
