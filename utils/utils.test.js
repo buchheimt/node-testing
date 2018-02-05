@@ -8,6 +8,20 @@ test('result should be a number', () => {
   expect(typeof utils.add(12, 13)).toBe('number');
 });
 
+test('should async add two numbers', done => {
+  utils.asyncAdd(4, 3, sum => {
+    expect(sum).toBe(7);
+    done();
+  });
+});
+
+test('should return a number', done => {
+  utils.asyncAdd(4, 3, sum => {
+    expect(typeof sum).toBe('number');
+    done();
+  });
+});
+
 test('should square a number', () => {
   expect(utils.square(4)).toBe(16);
 });
@@ -16,7 +30,21 @@ test('result should be a number', () => {
   expect(typeof utils.square(4)).toBe('number');
 });
 
-test('should be an object', () => {
+test('should async square a number', done => {
+  utils.asyncSquare(4, square => {
+    expect(square).toBe(16);
+    done();
+  });
+});
+
+test('result should be a number', done => {
+  utils.asyncSquare(4, square => {
+    expect(typeof square).toBe('number');
+    done();
+  });
+});
+
+test('result should be an object', () => {
   expect(typeof utils.setname({}, 'Tyler Buchheim')).toBe('object');
 });
 
